@@ -1,0 +1,37 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int gallons, unpaidbalance, consumption;
+	double A, B;
+	
+	cout << "Good day! This program computes their water consumption bill." << endl;
+	cout << "How many gallons of water have they consumed last month?" << endl;
+	cin >> gallons;
+	cout << endl;
+	cout << "Please indicate the amount of unpaid water consumption from past months in pesos." << endl;
+	cout << "Input 0(zero) if there is none" << endl;
+	cin >> unpaidbalance;
+	
+	
+	if (unpaidbalance <= 0)
+	{
+		A = (gallons*1.10)+35;
+		cout << "Their due balance this month is:P"<< A << endl;
+		cout << endl;
+		cout << "Please pay the amount before the indicated due date. Thank you!" << endl;
+    }
+	else
+	{
+		B = (gallons*1.10)+35+20+unpaidbalance;
+		cout << "Their due balance this month is:P"<< B << endl;
+		cout << endl;
+		cout << "Please pay the amount before the indicated due date. Thank you!" << endl;
+	}
+	
+	_getch();
+	return 0;
+}
